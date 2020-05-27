@@ -9,7 +9,7 @@ class PigLatinizer
     text_array = words.split(" ")
     pig_array = []
 
-    text_array.collect do |word|
+    text_array.each do |word|
       if word.start_with?(/[AEIOUaeiou]/)
         pig_word = word + "way"
         pig_array << pig_word
